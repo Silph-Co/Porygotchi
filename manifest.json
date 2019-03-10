@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+	"name": "Porygotchi",
+	"description": "A pet Porygon for your browser.",
+	"version": "0.1.0",
+	"author": "April Sylph",
+	"homepage_url": "https://github.com/AprilSylph",
+	"icons": {
+		"96": "icons/icon.png"
+	},
+	"browser_action": {
+		"default_title": "Porygotchi",
+		"default_icon": {
+			"96": "icons/icon.png"
+		},
+		"default_popup": "browserAction/screen.html",
+		"browser_style": true
+	},
+	"applications": {
+		"gecko": {
+			"id": "april@sylph.tech"
+		}
+	}
+}
