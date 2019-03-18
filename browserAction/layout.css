@@ -1,5 +1,6 @@
 body {
 	margin: 8px;
+	display: block;
 }
 body::before {
 	content: "";
@@ -11,4 +12,7 @@ body::before {
 	width: calc(100% + 26px);
 	margin: calc(-8px + -5px);
 	z-index: -1;
+}
+img {
+	display: inline-block;
 }
