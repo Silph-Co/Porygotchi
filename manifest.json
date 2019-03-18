@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Porygotchi",
 	"description": "A pet Porygon for your browser.",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "April Sylph",
 	"homepage_url": "https://github.com/AprilSylph",
 	"icons": {
