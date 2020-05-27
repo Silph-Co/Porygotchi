@@ -1,14 +1,12 @@
-name: Node.js Auto-Sign
+name: Sign WebExtension
 
 on:
   push:
     branches: [ master ]
 
 jobs:
-  build:
-
+  sign:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js 12
