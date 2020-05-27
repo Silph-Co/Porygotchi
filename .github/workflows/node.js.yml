@@ -1,4 +1,4 @@
-name: Node.js Auto-Sign (Test)
+name: Node.js Auto-Sign
 
 on:
   push:
@@ -16,8 +16,14 @@ jobs:
       with:
         node-version: 12
     - run: npm ci
-    - run: node_modules/.bin/web-ext sign
+    - name: Sign WebExtension
+      run: node_modules/.bin/web-ext sign
       env:
         WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY }}
         WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_SECRET }}
         WEB_EXT_ID: ${{ secrets.WEB_EXT_ID }}
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: web-ext-artifacts
+        path: web-ext-artifacts
