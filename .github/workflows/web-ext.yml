@@ -15,7 +15,7 @@ jobs:
         node-version: 12
     - run: npm ci
     - name: Lint WebExtension
-      run: node_modules/.bin/web-ext lint
+      run: npm run-script lint
   build:
     runs-on: ubuntu-latest
     steps:
@@ -26,7 +26,7 @@ jobs:
         node-version: 12
     - run: npm ci
     - name: Build WebExtension
-      run: node_modules/.bin/web-ext build
+      run: npm run-script build
     - name: Upload Artifacts
       uses: actions/upload-artifact@v2
       with:
@@ -42,7 +42,7 @@ jobs:
         node-version: 12
     - run: npm ci
     - name: Sign WebExtension
-      run: node_modules/.bin/web-ext sign; exit 0
+      run: npm run-script sign
       env:
         WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY }}
         WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_SECRET }}
