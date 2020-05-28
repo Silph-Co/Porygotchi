@@ -30,7 +30,7 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: web-ext-artifacts:build
+        name: build
         path: web-ext-artifacts
   sign:
     runs-on: ubuntu-latest
@@ -50,5 +50,5 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: web-ext-artifacts:sign
+        name: sign
         path: web-ext-artifacts
