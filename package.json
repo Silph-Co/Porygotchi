@@ -10,7 +10,7 @@
 		"url": "https://github.com/Silph-Co/Porygotchi"
 	},
 	"devDependencies": {
-		"web-ext": "^4.1.0"
+		"web-ext": "^4.2.0"
 	},
 	"scripts": {
 		"build": "web-ext build --ignore-files=package.json package-lock.json"
