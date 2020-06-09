@@ -43,7 +43,7 @@ jobs:
         node-version: 12
     - run: npm ci
     - name: Sign WebExtension
-      run: npm run-script sign
+      run: npm run-script sign || exit 0
       env:
         WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY }}
         WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_SECRET }}
